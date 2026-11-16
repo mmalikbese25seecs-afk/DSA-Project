@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Papertrail: search computer science papers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html">Papertrail</a>
+  <nav aria-label="Main"><a href="index.html" aria-current="page">Search</a><a href="add.html">Add paper</a></nav>
+</header>
+<main id="main">
+  <h1>Search computer science papers</h1>
+  <p class="lead">Find arXiv papers by title, abstract, author or category. Try several words, they don't need to appear next to each other.</p>
+  <form id="search-form" role="search">
+    <div class="combo">
+      <label class="sr" for="q">Search papers</label>
+      <input id="q" type="search" autocomplete="off" placeholder="e.g. graph neural networks"
+        role="combobox" aria-expanded="false" aria-controls="suggestions" aria-autocomplete="list">
+      <ul id="suggestions" role="listbox" aria-label="Suggestions" hidden></ul>
+    </div>
+    <button type="submit">Search</button>
+  </form>
+  <p id="status" aria-live="polite"></p>
+  <ol id="results" class="results"></ol>
+  <nav id="pager" class="pager" aria-label="Pagination" hidden>
+    <button type="button" class="ghost" id="prev">Previous</button>
+    <span id="page-info"></span>
+    <button type="button" class="ghost" id="next">Next</button>
+  </nav>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
