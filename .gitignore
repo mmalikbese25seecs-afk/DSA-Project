@@ -1,4 +1,36 @@
-#Dataset files
-*.json
+# Dataset files
+data/raw/
+data/*.jsonl
+data/*.json
 *.jsonl
-data/
+*.json
+
+#for small sample
+!data/sample/
+!data/sample/*.jsonl
+
+# Generated index files and barrels
+index/
+
+# Embeddings
+*.txt.gz
+glove*.txt
+glove*.zip
+*.vec
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+.pytest_cache/
+
+# Editors
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
