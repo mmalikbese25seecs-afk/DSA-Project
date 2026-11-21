@@ -8,7 +8,7 @@ from preprocess import preprocess_doc
 
 # paths
 BASE = Path(__file__).parent.parent
-DATA = BASE / "data" / "arxiv_100k.jsonl"
+DATA = BASE / "data" / "arxiv_cs_100k.jsonl"
 SAMPLE = BASE / "data" / "sample" / "sample_1000.jsonl"
 LEXICON = BASE / "index" / "lexicon.json"        # input: made by build_lexicon.py
 OUT = BASE / "index" / "forward_index.txt"       # output: the forward index
