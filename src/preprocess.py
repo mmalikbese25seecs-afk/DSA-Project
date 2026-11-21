@@ -59,20 +59,3 @@ def preprocess_doc(record):
         "n_versions": record.get("n_versions", 1),
     }
 
-#temo chack
-if __name__ == "__main__":
-
-    sample = Path(__file__).parent.parent / "data" / "sample" / "sample_1000.jsonl"
-
-    with open(sample, encoding="utf-8") as f:
-        for i, line in enumerate(f):
-            record = json.loads(line)
-            doc = preprocess_doc(record)
-
-            if doc is None:
-                continue
-
-            print(doc["id"], doc["title_tokens"])
-
-            if i == 999:
-                break
