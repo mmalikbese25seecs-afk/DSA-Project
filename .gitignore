@@ -5,10 +5,6 @@ data/*.json
 *.jsonl
 *.json
 
-#for small sample
-!data/sample/
-!data/sample/*.jsonl
-
 # Generated index files and barrels
 index/
 
